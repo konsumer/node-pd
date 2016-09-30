@@ -1,0 +1,29 @@
+{
+  "name": "pd",
+  "version": "0.0.1",
+  "description": "libpd wrapper for nodejs",
+  "main": "index.js",
+  "scripts": {
+    "generate": "ffi-generate -f libpd/libpd_wrapper/z_libpd.h -l libpd/libs/libpd -- -I libpd/pure-data/src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konsumer/node-pd.git"
+  },
+  "keywords": [
+    "puredata",
+    "libpd"
+  ],
+  "author": "David Konsumer <konsumer@jetboystudio.com> (http://konsumer.js.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/konsumer/node-pd/issues"
+  },
+  "homepage": "https://github.com/konsumer/node-pd#readme",
+  "dependencies": {
+    "ffi": "^2.1.0"
+  },
+  "devDependencies": {
+    "ffi-generate": "0.0.8"
+  }
+}
