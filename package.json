@@ -1,6 +1,6 @@
 {
   "name": "puredata",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "libpd wrapper for nodejs",
   "main": "index.js",
   "scripts": {
