@@ -19,9 +19,15 @@ make UTIL=true EXTRA=true
 sudo make install
 ```
 
+Now you can install it in your nodejs project:
+
+```
+npm i libpd
+```
+
 ## usage
 
-See [test.js](./test.js) for example usage.
+See [test.js](./test.js) for example usage, but here is basic idea:
 
 ```js
 const pd = require('libpd')
@@ -29,7 +35,6 @@ const pd = require('libpd')
 // open test.pd patch, from current dir
 pd.open('test.pd', __dirname)
   .then(() => {
-    console.log('ok.')
     // send a message to the patch
     pd.send('loadbang')
     
