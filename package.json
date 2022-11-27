@@ -1,10 +1,11 @@
 {
-  "name": "pd",
+  "name": "puredata",
   "version": "0.0.1",
   "description": "libpd wrapper for nodejs",
   "main": "index.js",
   "scripts": {
-    "generate": "ffi-generate -f libpd/libpd_wrapper/z_libpd.h -l libpd/libs/libpd -- -I libpd/pure-data/src/"
+    "generate": "npx -y ffi-generate -f libpd/libpd_wrapper/z_libpd.h -l libpd/libs/libpd -- -I libpd/pure-data/src/",
+    "test": "node test.js"
   },
   "repository": {
     "type": "git",
@@ -21,9 +22,6 @@
   },
   "homepage": "https://github.com/konsumer/node-pd#readme",
   "dependencies": {
-    "ffi": "^2.1.0"
-  },
-  "devDependencies": {
-    "ffi-generate": "0.0.8"
+    "ffi-napi": "^4.0.3"
   }
 }

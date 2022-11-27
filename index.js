@@ -1,20 +1,20 @@
-const ffi = require('ffi')
+const ffi = require('ffi-napi')
 
 const pd = ffi.Library('libpd', {
-  'libpd_init': ['void', []],
+  libpd_init: ['void', []],
 
-  'libpd_openfile': ['void', ['string', 'string']],
-  'libpd_closefile': ['void', ['void']],
+  libpd_openfile: ['void', ['string', 'string']],
+  libpd_closefile: ['void', ['void']],
 
-  'libpd_bang': ['int', ['string']],
-  'libpd_float': ['int', ['string', 'float']],
-  'libpd_symbol': ['int', ['string', 'string']],
+  libpd_bang: ['int', ['string']],
+  libpd_float: ['int', ['string', 'float']],
+  libpd_symbol: ['int', ['string', 'string']],
 
-  'libpd_start_message': ['int', ['int']],
-  'libpd_add_float': ['void', ['float']],
-  'libpd_add_symbol': ['void', ['string']],
-  'libpd_finish_list': ['int', ['string']],
-  'libpd_finish_message': ['int', ['string', 'string']]
+  libpd_start_message: ['int', ['int']],
+  libpd_add_float: ['void', ['float']],
+  libpd_add_symbol: ['void', ['string']],
+  libpd_finish_list: ['int', ['string']],
+  libpd_finish_message: ['int', ['string', 'string']]
 })
 
 pd.libpd_init()
@@ -55,4 +55,3 @@ module.exports.send = function (recv, message) {
     return false
   }
 }
-
