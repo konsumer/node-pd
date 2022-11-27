@@ -1,4 +1,4 @@
-# node-puredata
+# node-libpd
 libpd wrapper for nodejs
 
 To install/build libpd:
